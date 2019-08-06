@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HI</title>
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+<div style="text-align: center;"><h1>CACULATOR</h1></div>
+<table>
+    <tr>
+        <td colspan="5"> <input id="Result" type="text" value=""></td>
+    </tr>
+    <tr>
+        <td><input class="btn" type="button" value="7" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="8" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="9" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="/" onclick="display(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input class="btn" type="button" value="4" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="5" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="6" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="*" onclick="display(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input class="btn" type="button" value="1" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="2" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="3" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="-" onclick="display(this.value)"></td>
+    </tr>
+    <tr>
+        <td><input class="btn" type="button" value="C" onclick="clearDisplay()"></td>
+        <td><input class="btn" type="button" value="0" onclick="display(this.value)"></td>
+        <td><input class="btn" type="button" value="=" onclick="tinhToan()"></td>
+        <td><input class="btn" type="button" value="+" onclick="display(this.value)"></td>
+    </tr>
+    <script>
+        let manHinh = document.getElementById('Result');
+        function display(value) {
+            manHinh.value += value;
+            console.log(manHinh);
+        }
+        function tinhToan() {
+            let bieuThuc = manHinh.value;
+            manHinh.value = eval(bieuThuc);
+        }
+        function clearDisplay() {
+            document.getElementById('Result').value = "";
+        }
+    </script>
+</table>
+</body>
+</html>

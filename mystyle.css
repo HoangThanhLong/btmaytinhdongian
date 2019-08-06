@@ -1,0 +1,15 @@
+.btn{
+    width: 35px;
+    height: 35px;
+    background-color: darkgrey;
+}
+table{
+    background-color: fuchsia;
+}
+table{
+    margin: auto;
+}
+#Result{
+    width: 150px;
+    height: 20px;
+}
